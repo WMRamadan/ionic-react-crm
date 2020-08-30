@@ -13,7 +13,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { layers, book, people } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Bookings from './pages/Bookings';
-import Tab3 from './pages/Tab3';
+import Services from './pages/Services';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -41,7 +41,7 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route path="/tab1" component={Tab1} exact={true} />
           <Route path="/bookings" component={Bookings} exact={true} />
-          <Route path="/tab3" component={Tab3} />
+          <Route path="/services" component={Services} />
           <Route path="/" render={() => <Redirect to="/bookings" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -53,9 +53,9 @@ const App: React.FC = () => (
             <IonIcon icon={book} />
             <IonLabel>Bookings</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
+          <IonTabButton tab="services" href="/services">
             <IonIcon icon={layers} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonLabel>Services</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
